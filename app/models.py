@@ -3,13 +3,11 @@ from sqlalchemy import Column, Integer, String, ForeignKey
 from flask.ext.sqlalchemy import SQLAlchemy
 from flask.ext.script import Manager
 from flask.ext.migrate import Migrate, MigrateCommand
-from werkzeug import generate_password_hash, check_password_hash
-from flask.ext.login import UserMixin
 
-class User(db.Model,UserMixin):
-	__tablename__ = 'users'
+class Requests(db.Model):
+	__tablename__ = 'requests'
 	id = db.Column(db.Integer, primary_key=True)
-	num_requests = db.Column(db.Integer, default='0', index=True, unique=True)
+	num_requests = db.Column(db.Integer, index=True)
 
-if __name__ == 'main':
-	manager.run()
+	def __init__(self, num_requests):
+		self.num_requests = num_requests

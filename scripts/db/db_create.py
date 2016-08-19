@@ -9,7 +9,6 @@ from config import SQLALCHEMY_MIGRATE_REPO
 from app import db
 import os.path
 
-#db.create_all(bind='manual_input')
 db.create_all()
 
 if not os.path.exists(SQLALCHEMY_MIGRATE_REPO):

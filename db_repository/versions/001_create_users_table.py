@@ -4,9 +4,9 @@ from sqlalchemy.dialects.postgresql import JSON
 meta = MetaData()
 
 users = Table(
-				'users', meta,
-				Column('id', Integer, primary_key=True),
-				Column('num_requests', Integer)
+				'requests', meta,
+				Column('id', Integer, primary_key=True)
+				Column('num_requests', Integer, index=True)
 )
 
 def upgrade(migrate_engine):
