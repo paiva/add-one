@@ -1,6 +1,6 @@
 # Add One
 
-Protype of multiple applications talking to the same database implementing Flask. The only purpose of the application is to add 1 (+1) to the number of requests done to the server.
+Prototype of multiple applications talking to the same database implementing the Flask framework. The only purpose of the application is to add 1 (+1) to the number of requests done to the server.
 
 ### Installation
 ---
@@ -26,4 +26,4 @@ you have a postgres database server installed on your machine.
      python run.py
 
 
-Then, click on button `+1` to add a server request. 
+Then, click on button `+1` to add a server request.
